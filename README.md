@@ -1,5 +1,5 @@
-# React-JS-App Template v1.0.0
-GDSC NIT Silchar's Template for a JS + React + SASS app.
+# Agrishare Front End
+A platform connecting students, organisations and farmers.
 
 ## Features, Tools and Technologies
 - JavaScript
@@ -9,5 +9,4 @@ GDSC NIT Silchar's Template for a JS + React + SASS app.
 - Vite
 - pnpm
 - Prettier
-- Very Strict ESLint
 - Auto Lint and Pretty on commit using simple-git-hooks (compatible with Windows unlike husky)
