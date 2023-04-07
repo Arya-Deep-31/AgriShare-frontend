@@ -1,0 +1,213 @@
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #90bdb5;
+  position: relative;
+  .container {
+    margin-top: 1rem;
+
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 2rem;
+      img {
+        position: absolute;
+        width: 8rem;
+        margin: 0.8rem 2rem;
+        top: 2rem;
+        left: 2rem;
+      }
+      h1 {
+        color: #001790;
+      }
+    }
+    .mid {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      .mid_first {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+
+        padding: 0.1rem 3.8rem;
+        gap: 2rem;
+        h3 {
+          color: #001790;
+          font-size: 1.5rem;
+        }
+        i {
+          font-size: 2rem;
+          margin-right: 0.2rem;
+        }
+      }
+      .mid_sec {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem;
+        background-color: #7affe7;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+
+        height: 12rem;
+        gap: 6rem;
+        position: relative;
+
+        .mid_left {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          .mid_left_first {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            img {
+              width: 5rem;
+            }
+            h2 {
+              font-size: 2rem;
+              color: #001790;
+            }
+          }
+          .mid_left_bottom {
+            .mid_left_sec {
+              display: flex;
+              gap: 1rem;
+              margin-bottom: 1rem;
+            }
+            .mid_left_third {
+              display: flex;
+              gap: 4.5rem;
+              h3 {
+                background-color: #128772;
+                padding: 0.3rem 0.7rem;
+                border-radius: 1rem;
+              }
+            }
+          }
+        }
+        .mid_right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3rem;
+
+          .maxi {
+            background-color: #128772;
+            padding: 0.5rem;
+            border-radius: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .weather {
+    .container {
+      .top {
+        img {
+          top: 0.8rem;
+          left: 1rem;
+        }
+      }
+      // .mid{
+      //     .mid_first{
+      //         margin-bottom: rem;
+      //     }
+      // }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .weather {
+    .container {
+      margin: 0;
+      .top {
+        flex-direction: column;
+        img {
+          position: unset;
+          top: 0.8rem;
+          left: 1rem;
+        }
+      }
+      .mid {
+        .mid_first {
+          margin-bottom: 1rem;
+        }
+        .mid_sec {
+          padding: 1rem;
+          justify-content: space-around;
+          gap: 0;
+        }
+        .mid_right {
+          .maxi {
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+  .weather {
+    .container {
+      width: 100%;
+      margin: 0.5rem;
+      .top {
+        flex-direction: column;
+        img {
+          position: unset;
+          top: 0.8rem;
+          left: 1rem;
+        }
+      }
+      .mid {
+        .mid_first {
+          justify-content: space-around;
+          gap: 0;
+          img {
+            width: 3.8rem;
+          }
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+        .mid_sec {
+          // padding: 1rem;
+          margin: 0;
+          justify-content: space-around;
+          gap: 0;
+          .mid_left {
+            .mid_left_first {
+              justify-content: space-around;
+            }
+
+            .mid_left_bottom {
+              .mid_left_third {
+                gap: 3.6rem;
+              }
+            }
+          }
+        }
+        .mid_right {
+          .maxi {
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
