@@ -6,4 +6,6 @@ import AboutUs from "./AboutUs/AboutUs";
 import FAQ from "./FAQ/FAQ";
 import Hero from "./Hero/Hero";
 import Gallery from "./Gallery/Gallery";
-export { Button, Navbar, Footer, Connection, AboutUs, FAQ, Hero, Gallery };
+import WeaInfo from "./WeaInfo/WeaInfo";
+
+export { Button, Navbar, Footer, Connection, AboutUs, FAQ, Hero, Gallery, WeaInfo };
