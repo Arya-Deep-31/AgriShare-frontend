@@ -3,7 +3,7 @@ export const Data = [
     Id: 1,
     Question: " What we Provide",
     Answer:
-    "We provide a platform where the organizations can get connected with the farmers in need and vice versa"
+      "We provide a platform where the organizations can get connected with the farmers in need and vice versa",
   },
   {
     Id: 2,
