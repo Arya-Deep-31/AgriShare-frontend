@@ -10,6 +10,7 @@ import WeaInfo from "./WeaInfo/WeaInfo";
 import WhatWeAre from "./WhatWeAre/WhatWeAre";
 import WhoWeAre from "./WhoWeAre/WhoWeAre";
 import More from "./Modal/More";
+import ConnectCard from "./ConnectCard/ConnectCard";
 export {
   Button,
   Navbar,
@@ -23,4 +24,5 @@ export {
   WhatWeAre,
   WhoWeAre,
   More,
+  ConnectCard,
 };

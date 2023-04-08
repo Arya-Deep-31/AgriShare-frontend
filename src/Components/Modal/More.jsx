@@ -41,6 +41,7 @@ const More = (props) => {
         toast.success("item Created");
       }
     });
+    setMore(false);
   };
   return (
     <div className={styles.container}>

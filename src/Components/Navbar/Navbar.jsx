@@ -1,9 +1,19 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import { logout, reset } from "../../Global/Auth/authSlice";
 import styles from "./Navbar.module.scss";
 const Navbar = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user } = useSelector((state) => state.auth);
+  const { user, isError, message } = useSelector((state) => state.auth);
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    dispatch(reset());
+  }, [dispatch, isError, message]);
   return (
     <div className={styles.navbar}>
       <div className={styles.logo} onClick={() => navigate("/")}>
@@ -25,8 +35,13 @@ const Navbar = () => {
         </p>
       </div>
       {user && (
-        <div className={styles.profile} onClick={() => navigate("/profile")}>
-          <i className="fa-solid fa-user" />
+        <div className={styles.contain}>
+          <div className={styles.profile} onClick={() => navigate("/profile")}>
+            <i className="fa-solid fa-user" />
+          </div>
+          <button className={styles.button} onClick={() => dispatch(logout())}>
+            Logout
+          </button>
         </div>
       )}
     </div>
