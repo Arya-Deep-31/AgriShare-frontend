@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7affe7;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  height: 3rem;
+
+  .first {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .second {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem auto;
+    .first {
+      gap: 2rem;
+    }
+    .second {
+      gap: 2rem;
+    }
+  }
+}

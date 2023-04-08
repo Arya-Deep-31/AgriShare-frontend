@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Risque&display=swap");
+.container {
+  position: relative;
+  width: 100%;
+  .heading {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-family: "Risque";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 97px;
+      margin-top: 2rem;
+      font-family: "Risque", var(--gdsc-font-1);
+      color: #053d00;
+    }
+  }
+}
+.sliderContainer {
+  width: 100%;
+  transition: all 1s ease-in-out;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.swiperLeftArrow {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  z-index: 10;
+  cursor: pointer;
+  animation: blink 2s infinite ease-in-out;
+  img {
+    width: 80%;
+  }
+}
+.swiperRightArrow {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  z-index: 10;
+  transform: scaleX(-1);
+  animation: blink 2s infinite ease-in-out;
+  cursor: pointer;
+  img {
+    width: 80%;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .swiperLeftArrow,
+  .swiperRightArrow {
+    display: none;
+  }
+}
