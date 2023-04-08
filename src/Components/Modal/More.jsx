@@ -13,6 +13,7 @@ const More = (props) => {
     location: "",
     company: "",
     details: "",
+    number: "",
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
@@ -31,6 +32,7 @@ const More = (props) => {
       location: values.location,
       company: values.company,
       details: values.details,
+      number: values.number,
       createdby: user.result.isFarmer ? "farmer" : "org",
     };
     dispatch(createTrash(data)).then(() => {
@@ -82,6 +84,14 @@ const More = (props) => {
               placeholder="Enter Description"
               onChange={(event) =>
                 setValues((prev) => ({ ...prev, details: event.target.value }))
+              }
+              type="textarea"
+            />
+            <InputControl
+              label="Number"
+              placeholder="Enter your Number"
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, number: event.target.value }))
               }
               type="textarea"
             />

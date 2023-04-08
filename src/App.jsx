@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
-import { Home, Error, Blog, Weather, ConnectFarmer, Profile, AboutUs } from "./Pages";
+import { Home, Blog, Weather, ConnectFarmer, Profile, AboutUs } from "./Pages";
 
 import { Navbar, Footer } from "./Components";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,7 +17,6 @@ const App = () => {
         <Route path="/aboutus" element={<AboutUs />} />
 
         <Route path="/connect" element={<ConnectFarmer />} />
-        <Route path="*" element={<Error />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
