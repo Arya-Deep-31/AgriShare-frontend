@@ -14,7 +14,7 @@ const Hero = () => {
       {openSignup && <SignUp setOpenLogin={setOpenLogin} setSignup={setSignup} />}
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <p className={styles.head}>AgriShare- Agreed to Connect</p>
+          <p className={styles.head}>"AgriShare" - Agreed to Connect</p>
           <p className={styles.subhead}>Feel The Weather</p>
         </div>
         {user ? (
