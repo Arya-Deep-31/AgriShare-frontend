@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Error, Blog, Weather } from "./Pages";
+import { Home, Error, Blog, Weather , AboutUs } from "./Pages";
 
 import { Navbar, Footer } from "./Components";
 
