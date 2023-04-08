@@ -28,7 +28,9 @@
       margin-top: 3rem;
       width: 60%;
       display: flex;
-      justify-content: center;
+      gap: 2rem;
+      justify-content: space-around;
+      margin-bottom: 5rem;
       p {
         font-size: 1.3rem;
         text-align: center;
@@ -36,3 +38,20 @@
     }
   }
   
+
+
+  .founder1{
+    text-align: center;
+  }
+  .founder2{
+    text-align: center;
+
+  }
+  .founder3{
+    text-align: center;
+
+  }
+  .founder4{
+    text-align: center;
+
+  }
