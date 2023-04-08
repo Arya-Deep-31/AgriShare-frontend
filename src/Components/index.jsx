@@ -7,5 +7,20 @@ import FAQ from "./FAQ/FAQ";
 import Hero from "./Hero/Hero";
 import Gallery from "./Gallery/Gallery";
 import WeaInfo from "./WeaInfo/WeaInfo";
+import WhatWeAre from "./WhatWeAre/WhatWeAre";
+import WhoWeAre from "./WhoWeAre/WhoWeAre";
 import More from "./Modal/More";
-export { Button, Navbar, Footer, Connection, AboutUs, FAQ, Hero, Gallery, WeaInfo, More };
+export {
+  Button,
+  Navbar,
+  Footer,
+  Connection,
+  AboutUs,
+  FAQ,
+  Hero,
+  Gallery,
+  WeaInfo,
+  WhatWeAre,
+  WhoWeAre,
+  More,
+};

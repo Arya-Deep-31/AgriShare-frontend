@@ -1,15 +1,15 @@
 export const Data = [
   {
     Id: 1,
-    Question: " What is ECS?",
+    Question: " What we Provide",
     Answer:
-      "ECS is the technical society of ECE which conducts various events, workshops and contests for students in and out of the department. It is responsible for all the events related to ECE.",
+      "We provide a platform where the organizations can get connected with the farmers in need and vice versa",
   },
   {
     Id: 2,
 
-    Question: " In which year can you expect companies coming for internships?",
-    Answer: "3rd Year.",
+    Question: " Places we are available in?",
+    Answer: "We are still in search of expanding our platform",
   },
   {
     Id: 3,

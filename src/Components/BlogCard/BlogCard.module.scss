@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 0em;
+  border: 1px solid rgb(12, 197, 160);
+  background-color: #b1f5b5;
+  width: fit-content;
+  border-radius: 5.3em 5.3em;
+  // width: 70em;
+  img {
+    width: 28em;
+    height: 21em;
+    object-fit: cover;
+    position: relative;
+    top: -2.7em;
+    left: -2em;
+    border-radius: 5.3em 5.3em;
+  }
+  .writing {
+    text-align: center;
+    padding-top: 2em;
+    h2 {
+      font-size: 1.7rem;
+      font-family: var(--gdsc-font-1);
+      color: #414441;
+      font-weight: 600;
+    }
+    .desc {
+      max-width: 36em;
+      padding-right: 1.4em;
+      p {
+        padding-top: 1.7em;
+        margin-inline: 0.6em;
+        color: #414441;
+        font-family: var(--gdsc-font-1);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .button {
+      padding-top: 2em;
+      button {
+        padding: 0.7em;
+        padding-inline: 1.3em;
+        border-radius: 1em 1em;
+        border: 1px solid rgb(8, 125, 53);
+        background-color: #3c5a3c;
+        transition: 400ms ease-in-out;
+        &:hover {
+          background-color: rgb(64, 67, 65);
+        }
+        a {
+          text-decoration: none;
+          font-size: 0.86rem;
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .writing {
+    max-width: 30em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    img {
+      width: 20em;
+      height: auto;
+    }
+    .writing {
+      max-width: 24em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    img {
+      position: unset;
+      align-self: center;
+      padding-top: 1em;
+    }
+    .button {
+      padding-bottom: 1.2em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    img {
+      width: 16em;
+      height: 14em;
+    }
+    .writing {
+      max-width: 18em;
+      .desc {
+        width: 18em;
+        margin-inline: 0;
+        padding-right: 0 !important;
+        p {
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        }
+      }
+    }
+  }
+}

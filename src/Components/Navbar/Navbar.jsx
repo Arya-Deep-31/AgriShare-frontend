@@ -23,7 +23,7 @@ const Navbar = () => {
           <a href="#features">Helping Hand</a>
         </p>
         <p>
-          <a href="#blog">About Us</a>
+          <Link to="/aboutus">About Us</Link>
         </p>
       </div>
       <div className={styles.profile} onClick={() => navigate("/profile")}>
