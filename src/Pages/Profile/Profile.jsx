@@ -1,18 +1,17 @@
 /* eslint-disable no-underscore-dangle */
-import { useState } from "react";
-import { useSelector } from "react-redux";
-// import CardStructure from "../../Components/Cards/CardStructure";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import styles from "./Profile.module.scss";
-import { More } from "../../Components";
-// import { getTrash } from "../../Global/Trash/trashSlice";
+import { More, ConnectCard } from "../../Components";
+import { getTrash } from "../../Global/Trash/trashSlice";
 const Profile = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [mo, setMore] = useState(false);
   const { user } = useSelector((state) => state.auth);
-  // const { trash } = useSelector((state) => state.trash);
-  // useEffect(() => {
-  //   dispatch(getTrash());
-  // }, [trash, dispatch]);
+  const { request } = useSelector((state) => state.trash);
+  useEffect(() => {
+    dispatch(getTrash());
+  }, [request, dispatch]);
   return (
     <>
       {mo && <More setMore={setMore} />}
@@ -40,24 +39,22 @@ const Profile = () => {
           <button className={styles.button1} onClick={() => setMore(true)}>
             Upload More
           </button>
-          {/* <div className={styles.wrapper2_box}>
-            {trash
-              .filter((item) => item.creator === user.result._id)
-              .map((item) => (
+          <div className={styles.wrapper2_box}>
+            {request &&
+              request.map((item) => (
                 <div className={styles.wrapper2_inside}>
-                  <CardStructure
+                  <ConnectCard
                     src={item.pic}
                     id={item._id}
                     name={item.name}
+                    number={item.number}
                     location={item.location}
-                    compName={item.compName}
-                    price={item.price}
+                    company={item.company}
                     details={item.details}
-                    isProfile
                   />
                 </div>
               ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </>

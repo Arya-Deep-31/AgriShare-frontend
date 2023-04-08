@@ -137,17 +137,15 @@
 
     .wrapper2_box {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 6rem;
+      gap: 3rem;
 
       .wrapper2_inside {
         padding-top: 1.5em;
-        // padding-left: 1.5em;
         padding-bottom: 1.7em;
-        border: solid rgb(163, 163, 163) 1.4px;
         border-radius: 10%;
-        width: 460px;
       }
     }
   }

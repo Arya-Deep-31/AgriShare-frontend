@@ -3,19 +3,18 @@ import styles from "./ConnectCard.module.scss";
 const ConnectCard = (props) => {
   return (
     <div className={styles.innerWrapper}>
-      <img src={props.img} alt="Farmer" />
+      <img src={props.src} alt="Farmer" />
       <div className={styles.writting}>
         <div className={styles.titleDiv}>
-          <h3>{props.title}</h3>
+          <h3>{props.company}</h3>
           <img src="/images/facebook.png" alt="facebook"></img>
           {/* <i className="fa fa-facebook"></i> */}
         </div>
         <div className={styles.para}>
-          <p>Location : {props.loc}</p>
-          <p>Contact : {props.contact}</p>
-          <p>Email : {props.email}</p>
+          <p>Location : {props.location}</p>
+          <p>Contact : {props.number}</p>
         </div>
-        <p>{props.desc}</p>
+        <p>{props.details}</p>
       </div>
     </div>
   );
