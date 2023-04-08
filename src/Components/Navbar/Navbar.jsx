@@ -12,15 +12,11 @@ const Navbar = () => {
         <p>
           <Link to="/">Home</Link>
         </p>
-
         <p>
-          <a href="#wgpt3">Blogs</a>
+          <Link to="/blog">Blogs</Link>
         </p>
         <p>
-          <a href="#possibility">Connect</a>
-        </p>
-        <p>
-          <a href="#features">Helping Hand</a>
+          <Link to="/connect">Connect</Link>
         </p>
         <p>
           <Link to="/aboutus">About Us</Link>
