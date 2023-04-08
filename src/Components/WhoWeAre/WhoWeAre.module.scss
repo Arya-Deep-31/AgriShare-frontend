@@ -1,82 +1,67 @@
 .container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .heading {
     display: flex;
-    flex-direction: column;
+    margin-top: 3rem;
     justify-content: center;
     align-items: center;
-    .heading {
-      display: flex;
-      margin-top: 3rem;
-      justify-content: center;
-      align-items: center;
-      p {
-        font-family: "Risque";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3rem;
-        line-height: 97px;
-        margin-top: 2rem;
-        font-family: "Risque", var(--gdsc-font-1);
-        color: #053d00;
-      }
-    }
-    .logo{
-      background-color: #053d00;
-
-    }
-    .content {
-      margin-top: 3rem;
-      width: 60%;
-      display: flex;
-      gap: 2rem;
-      justify-content: space-around;
-      margin-bottom: 5rem;
-      background-repeat: no-repeat;
-      
-    }
-    h5{
-        margin-top: 2rem;
-        font-size: 1.4rem;
-        color: #031f00;
-    }
-    h6{
-        font-size: 1rem;
-        color: #083103;
-
+    p {
+      font-family: "Risque";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 97px;
+      margin-top: 2rem;
+      font-family: "Risque", var(--gdsc-font-1);
+      color: #053d00;
     }
   }
-  
-
-
-  .founder1{
-    text-align: center;
-    background-image: url(/images/founderbg.png);
-    transform: translateX(-4rem);
+  .logo {
+    background-color: #053d00;
+  }
+  .content {
+    margin-top: 3rem;
+    width: 60%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-bottom: 5rem;
     background-repeat: no-repeat;
-
-
   }
-  .founder2{
-    text-align: center;
-    background-image: url(/images/founderbg.png);
-    background-repeat: no-repeat;
-
-
-
+  h5 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #031f00;
   }
-  .founder3{
-    text-align: center;
-    background-repeat: no-repeat;
-
-    background-image: url(/images/founderbg.png);
-
-
+  h6 {
+    font-size: 1rem;
+    color: #083103;
   }
-  .founder4{
-    text-align: center;
-    background-image: url(/images/founderbg.png);
-    background-repeat: no-repeat;
+}
 
+.founder1 {
+  text-align: center;
+  background-image: url(/images/founderbg.png);
+  transform: translateX(-4rem);
+  background-repeat: no-repeat;
+}
+.founder2 {
+  text-align: center;
+  background-image: url(/images/founderbg.png);
+  background-repeat: no-repeat;
+}
+.founder3 {
+  text-align: center;
+  background-repeat: no-repeat;
 
-
-  }
+  background-image: url(/images/founderbg.png);
+}
+.founder4 {
+  text-align: center;
+  background-image: url(/images/founderbg.png);
+  background-repeat: no-repeat;
+}

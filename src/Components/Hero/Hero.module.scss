@@ -71,3 +71,14 @@
     color: #053d00;
   }
 }
+.text {
+  font-family: "Risque";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+  font-family: "Risque", var(--gdsc-font-1);
+  color: #053d00;
+  cursor: pointer;
+}

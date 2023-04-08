@@ -19,16 +19,16 @@ const Login = (props) => {
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const dispatch = useDispatch();
   const { user, isError, isSuccess, message } = useSelector((state) => state.auth);
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error(message);
-  //     setSubmitButtonDisabled(false);
-  //   }
-  //   if (isSuccess || user) {
-  //     setOpenLogin(false);
-  //   }
-  //   dispatch(reset());
-  // }, [user, dispatch, isError, isSuccess, message, setOpenLogin]);
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+      setSubmitButtonDisabled(false);
+    }
+    if (isSuccess || user) {
+      setOpenLogin(false);
+    }
+    dispatch(reset());
+  }, [user, dispatch, isError, isSuccess, message, setOpenLogin]);
   const handleSubmission = () => {
     if (!values.email || !values.pass) {
       setErrorMsg("Fill all fields");

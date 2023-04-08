@@ -1,55 +1,47 @@
-.aboutus{
+.aboutus {
   text-align: left;
   margin-right: 5rem;
   width: 0.1rem;
   height: 0.1rem;
-
-  
 }
 
-
 .container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
     display: flex;
-    flex-direction: column;
+
+    position: absolute;
+    top: 10rem;
     justify-content: center;
     align-items: center;
-
-
-    
-
-    .heading {
-      display: flex;
-
-      position: absolute;
-      top: 10rem;
-      justify-content: center;
-      align-items: center;
-      p {
-        font-family: "Risque";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3rem;
-        line-height: 97px;
-        margin-top: 2rem;
-        font-family: "Risque", var(--gdsc-font-1);
-        color: #053d00;
-      }
-    }
-    
-    .logo{
-      background-color: #053d00;
-
-    }
-    .content {
-      margin-top: 3rem;
-      width: 60%;
-      display: flex;
-      justify-content: center;
-      p {
-        font-size: 1.3rem;
-        text-align: center;
-      }
+    p {
+      font-family: "Risque";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 97px;
+      margin-top: 2rem;
+      font-family: "Risque", var(--gdsc-font-1);
+      color: #053d00;
     }
   }
-  
+
+  .logo {
+    background-color: #053d00;
+  }
+  .content {
+    margin-top: 3rem;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    p {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+}

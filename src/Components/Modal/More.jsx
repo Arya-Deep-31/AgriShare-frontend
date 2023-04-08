@@ -10,7 +10,6 @@ const More = (props) => {
   const { setMore } = props;
   const [values, setValues] = useState({
     name: "",
-    price: "",
     location: "",
     company: "",
     details: "",
@@ -19,20 +18,22 @@ const More = (props) => {
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const dispatch = useDispatch();
   const { isSuccess } = useSelector((state) => state.trash);
+  const { user } = useSelector((state) => state.auth);
   const handleSubmission = () => {
-    if (
-      !values.name ||
-      !values.price ||
-      !values.company ||
-      !values.details ||
-      !values.location
-    ) {
+    if (!values.name || !values.company || !values.details || !values.location) {
       setErrorMsg("Fill all fields");
       return;
     }
     setErrorMsg("");
     setSubmitButtonDisabled(true);
-    dispatch(createTrash(values)).then(() => {
+    const data = {
+      name: values.name,
+      location: values.location,
+      company: values.company,
+      details: values.details,
+      createdby: user.result.isFarmer ? "farmer" : "org",
+    };
+    dispatch(createTrash(data)).then(() => {
       if (isSuccess) {
         setMore(false);
         toast.success("item Created");
@@ -42,18 +43,22 @@ const More = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.innerBox}>
-        <h1 className={styles.heading}>Add product</h1>
+        <h1 className={styles.heading}>
+          {user.result.isFarmer ? "Add Request" : "Lend Service"}
+        </h1>
 
         <div className={styles.fields}>
           <div className={styles.fieldsChild}>
-            <InputControl
-              label="Company"
-              placeholder="Enter company name"
-              onChange={(event) =>
-                setValues((prev) => ({ ...prev, company: event.target.value }))
-              }
-              type="text"
-            />
+            {!user.result.isFarmer && (
+              <InputControl
+                label="Company"
+                placeholder="Enter company name"
+                onChange={(event) =>
+                  setValues((prev) => ({ ...prev, company: event.target.value }))
+                }
+                type="text"
+              />
+            )}
             <InputControl
               label="Name"
               placeholder="Enter name"
@@ -72,14 +77,6 @@ const More = (props) => {
             />
           </div>
           <div className={styles.fieldsChild}>
-            <InputControl
-              label="Price"
-              placeholder="Enter Price"
-              onChange={(event) =>
-                setValues((prev) => ({ ...prev, price: event.target.value }))
-              }
-              type="text"
-            />
             <InputControl
               label="Description"
               placeholder="Enter Description"
