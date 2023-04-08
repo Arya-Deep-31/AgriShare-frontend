@@ -20,11 +20,12 @@ const Connection = () => {
           speed={500}
           effect="coverflow"
           rewind
+          initialSlide={2}
           coverflowEffect={{
-            rotate: 0,
+            rotate: 10,
             stretch: 0,
             depth: 200,
-            modifier: 2.5,
+            // modifier: 2.5,
           }}
           breakpoints={{
             0: {
