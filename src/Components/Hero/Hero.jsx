@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         ) : (
           <div className={styles.buttonContainer}>
-            <p className={styles.text} onClick={() => navigate("/connect")}>
+            <p className={styles.text} onClick={() => navigate("/profile")}>
               {user.result.isFarmer ? "Your Helping Hand" : "Lend a Hand"}
             </p>
           </div>
