@@ -7,28 +7,43 @@ import { toast } from "react-toastify";
 import { register, reset } from "../../Global/Auth/authSlice";
 import styles from "./SignUp.module.scss";
 import InputControl from "./InputControl";
+const options = [
+  {
+    label: "Farmer",
+    value: "farmer",
+  },
+  {
+    label: "Organisation",
+    value: "organisation",
+  },
+];
 const SignUp = (props) => {
   const { setSignup, setOpenLogin } = props;
   const [show, setShow] = useState("show");
+  const [V, setV] = useState("farmer");
   const [values, setValues] = useState({
+    name: "",
     email: "",
     pass: "",
     cpass: "",
   });
+  const handleChange = (event) => {
+    setV(event.target.value);
+  };
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const dispatch = useDispatch();
   const { user, isError, isSuccess, message } = useSelector((state) => state.auth);
-  // useEffect(() => {
-  //   if (isError) {
-  //     toast.error(message);
-  //   }
-  //   if (isSuccess || user) {
-  //     setSignup(false);
-  //     toast.success("Account Created");
-  //   }
-  //   dispatch(reset());
-  // }, [user, dispatch, isError, isSuccess, message, setSignup]);
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || user) {
+      setSignup(false);
+      toast.success("Account Created");
+    }
+    dispatch(reset());
+  }, [user, dispatch, isError, isSuccess, message, setSignup]);
 
   const handleSubmission = () => {
     if (!values.email || !values.pass || !values.cpass) {
@@ -41,7 +56,12 @@ const SignUp = (props) => {
     }
     setErrorMsg("");
     setSubmitButtonDisabled(true);
-    const data = { email: values.email, pass: values.pass };
+    const data = {
+      name: values.name,
+      email: values.email,
+      pass: values.pass,
+      isFarmer: V === "farmer",
+    };
     dispatch(register(data));
   };
   const handleClick = () => {
@@ -56,6 +76,14 @@ const SignUp = (props) => {
         </div>
         <div className={styles.box}>
           <div className={styles.left}>
+            <InputControl
+              label="Name"
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, name: event.target.value }))
+              }
+              placeholder="Enter Name"
+              type="text"
+            />
             <InputControl
               label="Email"
               onChange={(event) =>
@@ -95,6 +123,15 @@ const SignUp = (props) => {
                 {show} password
               </p>
             )}
+            <div className="select-container">
+              <select value={V} onChange={(e) => handleChange(e)}>
+                {options.map((option) => (
+                  <option key={option.label} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
             <div className={styles.footer}>
               <b className={styles.error}>{errorMsg}</b>
               <button disabled={submitButtonDisabled} onClick={handleSubmission}>
