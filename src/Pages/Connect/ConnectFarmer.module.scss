@@ -1,0 +1,9 @@
+.container {
+  background-color: #e1ffd7;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 6em;
+  }
+}
