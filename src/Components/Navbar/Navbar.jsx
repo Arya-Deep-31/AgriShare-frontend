@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 const Navbar = () => {
   const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
   return (
     <div className={styles.navbar}>
       <div className={styles.logo} onClick={() => navigate("/")}>
@@ -12,23 +14,21 @@ const Navbar = () => {
         <p>
           <Link to="/">Home</Link>
         </p>
-
         <p>
-          <a href="#wgpt3">Blogs</a>
+          <Link to="/blog">Blogs</Link>
         </p>
         <p>
-          <a href="#possibility">Connect</a>
-        </p>
-        <p>
-          <a href="#features">Helping Hand</a>
+          <Link to="/connect">Connect</Link>
         </p>
         <p>
           <Link to="/aboutus">About Us</Link>
         </p>
       </div>
-      <div className={styles.profile} onClick={() => navigate("/profile")}>
-        <i className="fa-solid fa-user" />
-      </div>
+      {user && (
+        <div className={styles.profile} onClick={() => navigate("/profile")}>
+          <i className="fa-solid fa-user" />
+        </div>
+      )}
     </div>
   );
 };

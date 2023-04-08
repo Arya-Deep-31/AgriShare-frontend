@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import styles from "./Weather.module.scss";
-import { WeaInfo } from "../../Components";
+// import { WeaInfo } from "../../Components";
 const Weather = () => {
   const [city, setcity] = useState(null);
   const [search, setsearch] = useState("Patna");
-
-  useEffect(() => {
-    const fetchapi = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=d57ef43f9ebb9ad8cdf77a1a6c84ef4d`;
-      const res = await fetch(url);
-      const son = await res.json();
-      setcity(son);
-    };
+  const handleClick = () => {
     fetchapi();
-  }, [search]);
+  };
+  const fetchapi = async () => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=d57ef43f9ebb9ad8cdf77a1a6c84ef4d`;
+    const res = await fetch(url);
+    const son = await res.json();
+    setcity(son);
+  };
+  useEffect(() => {
+    fetchapi();
+  }, []);
   // console.log(city);
   return (
     <div className={styles.weather}>
@@ -35,12 +37,9 @@ const Weather = () => {
                   setsearch(e.target.value);
                 }}
               />
-              <i
-                className="fa-sharp fa-light fa-magnifying-glass"
-                onClick={() => {
-                  setsearch("");
-                }}
-              />
+              <button className={styles.button1} onClick={handleClick}>
+                search
+              </button>
             </div>
           </div>
 
@@ -73,12 +72,12 @@ const Weather = () => {
           </div>
         </div>
 
-        <div className={styles.end}>
+        {/* <div className={styles.end}>
           <WeaInfo />
           <WeaInfo />
           <WeaInfo />
           <WeaInfo />
-        </div>
+        </div> */}
       </div>
     </div>
   );
