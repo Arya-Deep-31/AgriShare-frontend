@@ -1,10 +1,13 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Login from "../Modal/Login";
 import SignUp from "../Modal/SignUp";
 import styles from "./Hero.module.scss";
 const Hero = () => {
+  const navigate = useNavigate();
   const [openLogin, setOpenLogin] = useState(false);
   const [openSignup, setSignup] = useState(false);
   const { user } = useSelector((state) => state.auth);
@@ -17,7 +20,7 @@ const Hero = () => {
           <p className={styles.head}>AgriShare- Agreed to Connect</p>
           <p className={styles.subhead}>Feel The Weather</p>
         </div>
-        {user ? (
+        {!user ? (
           <div className={styles.buttonContainer}>
             <div className={styles.org}>
               <img src="/images/vector.png" alt="" />
@@ -35,7 +38,11 @@ const Hero = () => {
             </div>
           </div>
         ) : (
-          <div className={styles.buttonContainer}>Lend a ahnd</div>
+          <div className={styles.buttonContainer}>
+            <p className={styles.text} onClick={() => navigate("/connect")}>
+              {user.result.isFarmer ? "Your Helping Hand" : "Lend a Hand"}
+            </p>
+          </div>
         )}
       </div>
     </>

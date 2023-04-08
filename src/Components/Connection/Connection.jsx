@@ -1,7 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper";
-import "swiper/css/navigation";
+import { EffectCoverflow } from "swiper";
 import "swiper/css/effect-coverflow";
 import Cards from "./Cards";
 import styles from "./Connection.module.scss";
@@ -13,18 +12,11 @@ const Connection = () => {
         <p>Get Connected</p>
       </div>
       <div className={styles.sliderContainer}>
-        <div className={styles.swiperLeftArrow} id="leftArrow">
-          <img src="/images/arrow.png" alt="arrow" />
-        </div>
         <Swiper
-          modules={[Navigation, EffectCoverflow]}
+          modules={[EffectCoverflow]}
           centeredSlides
           slidesPerView={4}
           spaceBetween={-20}
-          navigation={{
-            nextEl: "#rightArrow",
-            prevEl: "#leftArrow",
-          }}
           speed={500}
           effect="coverflow"
           rewind
@@ -68,9 +60,6 @@ const Connection = () => {
               );
             })}
         </Swiper>
-        <div className={styles.swiperRightArrow} id="rightArrow">
-          <img src="/images/arrow.png" alt="arrow" />
-        </div>
       </div>
     </div>
   );

@@ -4,8 +4,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import trashService from "./trashService";
 
 const initialState = {
-  trash: [],
-  oneTrash: {},
+  request: [],
+  oneRequest: {},
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -96,7 +96,7 @@ export const trashSlice = createSlice({
       .addCase(createTrash.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.trash.push(action.payload);
+        state.request.push(action.payload);
       })
       .addCase(createTrash.rejected, (state, action) => {
         state.isLoading = false;
@@ -109,7 +109,7 @@ export const trashSlice = createSlice({
       .addCase(getTrash.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.trash = action.payload;
+        state.request = action.payload;
       })
       .addCase(getTrash.rejected, (state, action) => {
         state.isLoading = false;
@@ -122,7 +122,9 @@ export const trashSlice = createSlice({
       .addCase(deleteTrash.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.trash = state.trash.filter((trash) => trash._id !== action.payload.id);
+        state.request = state.request.filter(
+          (request) => request._id !== action.payload.id
+        );
       })
       .addCase(deleteTrash.rejected, (state, action) => {
         state.isLoading = false;
@@ -135,7 +137,7 @@ export const trashSlice = createSlice({
       .addCase(searchTrash.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.trash = action.payload;
+        state.request = action.payload;
       })
       .addCase(searchTrash.rejected, (state, action) => {
         state.isLoading = false;
@@ -148,7 +150,7 @@ export const trashSlice = createSlice({
       .addCase(getOneTrash.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.oneTrash = action.payload;
+        state.oneRequest = action.payload;
       })
       .addCase(getOneTrash.rejected, (state, action) => {
         state.isLoading = false;
