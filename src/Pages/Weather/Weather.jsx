@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./Weather.module.scss";
-// import { WeaInfo } from "../../Components";
 const Weather = () => {
   const [city, setcity] = useState(null);
   const [search, setsearch] = useState("Patna");
@@ -16,7 +15,6 @@ const Weather = () => {
   useEffect(() => {
     fetchapi();
   }, []);
-  // console.log(city);
   return (
     <div className={styles.weather}>
       <div className={styles.container}>
@@ -47,7 +45,7 @@ const Weather = () => {
             <div className={styles.mid_left}>
               <div className={styles.mid_left_first}>
                 <img src="/images/cloud.svg" className="fa-solid fa-home" alt="avatar" />
-                <h2>{Math.floor(city?.main?.temp)}</h2>
+                <h2>{Math.floor(city?.main?.temp)} C</h2>
                 <p>cloudy/sunny</p>
               </div>
               <div className={styles.mid_left_bottom}>
@@ -65,8 +63,8 @@ const Weather = () => {
             </div>
             <div className={styles.mid_right}>
               <div className={styles.maxi}>
-                <h2>MAX:{Math.floor(city?.main?.temp_max)}</h2>
-                <h2>MIN:{Math.floor(city?.main?.temp_min)}</h2>
+                <h2>MAX:{Math.floor(city?.main?.temp_max)} C</h2>
+                <h2>MIN:{Math.floor(city?.main?.temp_min)} C</h2>
               </div>
             </div>
           </div>
