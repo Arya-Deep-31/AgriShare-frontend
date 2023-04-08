@@ -18,7 +18,9 @@ const Hero = () => {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <p className={styles.head}>&ldquo;AgriShare&rdquo; - Agreed to Connect</p>
-          <p className={styles.subhead}>Feel The Weather</p>
+          <p className={styles.subhead} onClick={() => navigate("/weather")}>
+            Feel The Weather
+          </p>
         </div>
         {!user ? (
           <div className={styles.buttonContainer}>

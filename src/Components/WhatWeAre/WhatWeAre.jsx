@@ -3,13 +3,17 @@ import styles from "./WhatWeAre.module.scss";
 const AboutUs = () => {
   return (
     <>
-      <img className={styles.aboutus} src="aboutus/aboutus.png" alt="" />
+      <img className={styles.aboutus} src="/aboutus/aboutus.png" alt="" />
 
       <div className={styles.container}>
-        <div className={styles.heading}>
-          <p>What We Are</p>
+        <div>
+          <div className={styles.co}>
+            <img className={styles.logow} src="logowithbg/logowithbg.png" alt="" />
+          </div>
+          <div className={styles.heading}>
+            <p>What We Are</p>
+          </div>
         </div>
-        <img className={styles.logow} src="logowithbg/logowithbg.png" alt="" />
 
         <div className={styles.content}>
           <p>
