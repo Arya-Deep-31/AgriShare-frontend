@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #90bdb5;
+  background: #8dcfc4;
   position: relative;
   .container {
     margin-top: 1rem;
@@ -35,7 +35,7 @@
         margin-bottom: 0.5rem;
 
         padding: 0.1rem 3.8rem;
-        gap: 2rem;
+        gap: 3rem;
         h3 {
           color: #001790;
           font-size: 1.5rem;
@@ -43,6 +43,34 @@
         i {
           font-size: 2rem;
           margin-right: 0.2rem;
+        }
+
+        .search {
+          /* width: 600px; */
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          // margin-top: 3rem;
+          // position: relative;
+
+          i {
+            position: relative;
+            right: 1.8rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+          }
+          input {
+            border-radius: 20px;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            width: 8rem;
+            color: black;
+            border: 1px solid rgb(138, 146, 223);
+            /* outline: none; */
+            font-weight: 400;
+            background-color: #f1ecec;
+            letter-spacing: 1.2px;
+          }
         }
       }
       .mid_sec {
@@ -83,7 +111,7 @@
             }
             .mid_left_third {
               display: flex;
-              gap: 4.5rem;
+              gap: 3rem;
               h3 {
                 background-color: #128772;
                 padding: 0.3rem 0.7rem;
@@ -147,6 +175,13 @@
           padding: 1rem;
           justify-content: space-around;
           gap: 0;
+          .mid_left {
+            .mid_left_bottom {
+              .mid_left_third {
+                gap: 2rem;
+              }
+            }
+          }
         }
         .mid_right {
           .maxi {
@@ -159,7 +194,7 @@
     }
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 450px) {
   .weather {
     .container {
       width: 100%;
@@ -195,7 +230,7 @@
 
             .mid_left_bottom {
               .mid_left_third {
-                gap: 3.6rem;
+                gap: 2rem;
               }
             }
           }
