@@ -35,12 +35,7 @@ const Weather = () => {
                   setsearch(e.target.value);
                 }}
               />
-              <i
-                className="fa-sharp fa-light fa-magnifying-glass"
-                onClick={() => {
-                  setsearch("");
-                }}
-              />
+              <i className="fa-sharp fa-light fa-magnifying-glass" />
             </div>
           </div>
 
