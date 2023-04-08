@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
           <a href="#features">Helping Hand</a>
         </p>
         <p>
-          <a href="#blog">About Us</a>
+          <Link to="/aboutus">About Us</Link>
         </p>
       </div>
       <div className={styles.profile}>
