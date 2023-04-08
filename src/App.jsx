@@ -1,23 +1,27 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import { Home, Error, Blog, Weather, ConnectFarmer, AboutUs } from "./Pages";
+import { ToastContainer } from "react-toastify";
+import { Home, Error, Blog, Weather, ConnectFarmer, Profile, AboutUs } from "./Pages";
 
 import { Navbar, Footer } from "./Components";
-
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
         <Route path="/weather" element={<Weather />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/aboutus" element={<AboutUs />} />
 
         <Route path="/connect" element={<ConnectFarmer />} />
         <Route path="*" element={<Error />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 };

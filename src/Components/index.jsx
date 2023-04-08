@@ -9,7 +9,7 @@ import Gallery from "./Gallery/Gallery";
 import WeaInfo from "./WeaInfo/WeaInfo";
 import WhatWeAre from "./WhatWeAre/WhatWeAre";
 import WhoWeAre from "./WhoWeAre/WhoWeAre";
-
+import More from "./Modal/More";
 export {
   Button,
   Navbar,
@@ -22,4 +22,5 @@ export {
   WeaInfo,
   WhatWeAre,
   WhoWeAre,
+  More,
 };

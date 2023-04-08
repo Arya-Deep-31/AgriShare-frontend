@@ -2,17 +2,15 @@
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   z-index: 99;
   justify-content: center;
   align-items: center;
-
   .innerBox {
     width: 500px;
     height: fit-content;
     width: fit-content;
-    background-color: #fff;
+    background-color: #e1ffd7;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 10px;

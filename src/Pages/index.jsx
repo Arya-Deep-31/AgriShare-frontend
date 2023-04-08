@@ -4,5 +4,5 @@ import Weather from "./Weather/Weather";
 import Blog from "./Blog/Blog";
 import ConnectFarmer from "./Connect/ConnectFarmer";
 import AboutUs from "./AboutUs/AboutUs";
-
-export { Home, Error, Weather, Blog, AboutUs, ConnectFarmer };
+import Profile from "./Profile/Profile";
+export { Home, Error, Weather, Blog, AboutUs, Profile, ConnectFarmer };
