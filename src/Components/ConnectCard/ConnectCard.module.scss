@@ -1,0 +1,50 @@
+.innerWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  padding: 4em;
+  border: 1px solid rgb(5, 80, 20);
+  border-radius: 6em 6em;
+  background-color: rgb(164, 211, 174);
+  width: 80em;
+  img {
+    width: 32em;
+    height: 19em;
+    object-fit: cover;
+    border-radius: 4em 4em;
+  }
+  .writting {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    .titleDiv {
+      display: flex;
+      flex-direction: row;
+      gap: 3em;
+      img {
+        width: 2.2em;
+        height: 2.2em;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    h3 {
+      font-family: var(--agriRisque);
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    .para {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      p {
+        font-size: 1.2rem;
+        font-family: var(--agriRisque);
+      }
+    }
+    p {
+      font-family: var(--agriRisque);
+      font-size: 1.2rem;
+    }
+  }
+}
