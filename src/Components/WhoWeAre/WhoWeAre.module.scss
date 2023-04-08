@@ -31,10 +31,18 @@
       gap: 2rem;
       justify-content: space-around;
       margin-bottom: 5rem;
-      p {
-        font-size: 1.3rem;
-        text-align: center;
-      }
+      background-repeat: no-repeat;
+      
+    }
+    h5{
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        color: #031f00;
+    }
+    h6{
+        font-size: 1rem;
+        color: #083103;
+
     }
   }
   
@@ -42,16 +50,33 @@
 
   .founder1{
     text-align: center;
+    background-image: url(/images/founderbg.png);
+    transform: translateX(-4rem);
+    background-repeat: no-repeat;
+
+
   }
   .founder2{
     text-align: center;
+    background-image: url(/images/founderbg.png);
+    background-repeat: no-repeat;
+
+
 
   }
   .founder3{
     text-align: center;
+    background-repeat: no-repeat;
+
+    background-image: url(/images/founderbg.png);
+
 
   }
   .founder4{
     text-align: center;
+    background-image: url(/images/founderbg.png);
+    background-repeat: no-repeat;
+
+
 
   }

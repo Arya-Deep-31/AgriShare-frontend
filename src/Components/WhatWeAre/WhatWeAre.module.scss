@@ -1,3 +1,13 @@
+.aboutus{
+  text-align: left;
+  margin-right: 5rem;
+  width: 0.1rem;
+  height: 0.1rem;
+
+  
+}
+
+
 .container {
     width: 100%;
     display: flex;
@@ -5,15 +15,14 @@
     justify-content: center;
     align-items: center;
 
-    .aboutus{
-      text-align: left;
-      width: 100%;
-      
-    }
+
+    
 
     .heading {
       display: flex;
-      margin-top: 3rem;
+
+      position: absolute;
+      top: 10rem;
       justify-content: center;
       align-items: center;
       p {

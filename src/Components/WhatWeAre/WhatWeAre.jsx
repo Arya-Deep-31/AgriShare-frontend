@@ -2,9 +2,10 @@ import styles from "./WhatWeAre.module.scss";
 
 const AboutUs = () => {
   return (
-    
+<>
+   <img classname = {styles.aboutus} src="aboutus/aboutus.png" alt="" />
+
     <div className={styles.container}>
-              <img classname = {styles.aboutus} src="aboutus/aboutus.png" alt="" />
 
       <div className={styles.heading}>
         <p>What We Are</p>
@@ -26,6 +27,7 @@ const AboutUs = () => {
         </p>
       </div>
     </div>
+    </> 
   );
 };
 
