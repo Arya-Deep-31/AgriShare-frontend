@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Cards.module.scss";
 const Cards = (data) => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container1}>
       <div className={styles.card1}>
@@ -32,7 +34,9 @@ const Cards = (data) => {
               </a>
             </div>
             <div>
-              <button className={styles.button}>connect</button>
+              <button className={styles.button} onClick={() => navigate("/connect")}>
+                connect
+              </button>
             </div>
           </div>
         </div>
