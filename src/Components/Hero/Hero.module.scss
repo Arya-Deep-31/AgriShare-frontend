@@ -12,6 +12,7 @@
     align-items: center;
     flex-direction: column;
     .head {
+      user-select: none;
       font-family: "Risque";
       font-style: normal;
       font-weight: 400;
@@ -22,6 +23,7 @@
       color: #053d00;
     }
     .subhead {
+      cursor: pointer;
       font-family: "Risque";
       font-style: normal;
       font-weight: 400;
@@ -38,6 +40,7 @@
     justify-content: center;
     gap: 4rem;
     .org {
+      cursor: pointer;
       img {
         width: 60%;
       }
@@ -52,6 +55,7 @@
       color: #053d00;
     }
     .farm {
+      cursor: pointer;
       p {
         font-family: "Risque", var(--gdsc-font-1);
       }

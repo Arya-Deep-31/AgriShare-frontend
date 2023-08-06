@@ -27,9 +27,11 @@ const Navbar = () => {
         <p>
           <Link to="/blog">Blogs</Link>
         </p>
-        <p>
-          <Link to="/connect">Connect</Link>
-        </p>
+        {user && (
+          <p>
+            <Link to="/connect">Connect</Link>
+          </p>
+        )}
         <p>
           <Link to="/aboutus">About Us</Link>
         </p>
